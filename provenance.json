@@ -1,0 +1,66 @@
+{
+  "name": "PVZQoL2",
+  "version": "0.5.0",
+  "game": "PVZ Replanted 1.5.1469 x64",
+  "gameAssemblySha256": "E7333EAF87996FA44B4A3526986272319B7D01F7ACDBCFF52451652F61CEB696",
+  "sharedProtocol": 5,
+  "dllSha256": "8D047D6B921EC89CC136AA14B9AFCB1E0B15A6B7D322423EA276ED745DFC6206",
+  "exeSha256": "164773BDF5A1E53EAFB96798335130BEB2EA4F9F04016A9C088063B11A2C5509",
+  "minhook": {
+    "version": "1.3.4",
+    "licenseFile": "LICENSE-MinHook.txt",
+    "source": "https://github.com/TsudaKageyu/minhook/tree/v1.3.4"
+  },
+  "compiler": {
+    "version": "Zig 0.13.0",
+    "source": "https://ziglang.org/download/0.13.0/zig-windows-x86_64-0.13.0.zip",
+    "archiveSha256": "d859994725ef9402381e557c60bb57497215682e355204d754ee3df75ee3c158",
+    "launcher": ".NET Framework C# compiler"
+  },
+  "newFeatures": {
+    "autoSupplies": {
+      "scope": "Zen Garden 43 and TreeOfWisdom 50 only",
+      "transaction": "UserService.AddCoins, SetPurchases, SaveDetails; verify and restore coins/stock if transaction fails",
+      "defaultEnabled": true,
+      "normalCoinPayment": true,
+      "quantities": {
+        "treeFood": 1,
+        "fertilizer": 5,
+        "bugSpray": 5
+      },
+      "prices": "Actual StoreEntryModel.GetItemCost using current DataService.StoreEntryData",
+      "stockEncoding": "1000 + remaining uses, as native shop",
+      "onlyWhenEmpty": true,
+      "settingsKeys": [
+        "autoFertilizer",
+        "autoBugSpray",
+        "autoTreeFood"
+      ]
+    },
+    "autoFeedTree": {
+      "stop": "User disables switch, no available tree food / insufficient purchase balance, pause, store or dialog",
+      "nativeMethod": "Challenge.TreeOfWisdomFertilize; native CanFeed; native animation and normal consumption",
+      "defaultEnabled": true,
+      "intervalMs": 3000,
+      "targetHeight": "continuous per user request",
+      "scope": "Only live TreeOfWisdom mode 50, activity frame callback on game main thread"
+    }
+  },
+  "existingFeatures": [
+    "Native animated sun and money pickup",
+    "Garden cabbage easter egg appearance",
+    "Zero-stock paid rake repurchase"
+  ],
+  "healthOverlay": false,
+  "gameBinaryModified": false,
+  "saveFilesEditedForInstallation": false,
+  "defenderScan": "No threats found in runtime package",
+  "runtimeTestPerformed": false,
+  "offlineChecks": {
+    "liveGameOrSaveAccess": false,
+    "rakeScenarios": 10,
+    "gardenScenarios": 20,
+    "frameCallbackCovered": true,
+    "passed": true
+  }
+}

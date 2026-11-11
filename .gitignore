@@ -1,0 +1,21 @@
+# Local build outputs (the curated dist directory is intentionally tracked)
+/.build/
+/PVZQoL2.exe
+/PVZQoL2.dll
+*.pdb
+*.obj
+*.o
+*.lib
+*.exp
+*.log
+diagnostics.json
+.vs/
+.vscode/
+# Never add game files or saves
+GameAssembly.dll
+Replanted.exe
+*_Data/
+UserData/
+Saves/
+savegames/
+backup*/
