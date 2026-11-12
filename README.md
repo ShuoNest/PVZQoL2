@@ -2,7 +2,7 @@
 
 适用于 **Plants vs. Zombies: Replanted（植物大战僵尸：重植版）1.5.1469 x64** 的 Windows 便携插件。自动拾取保留原生动画，花园耗材用完按商店价格补购，还可以持续喂智慧树。
 
-**[下载便携版](https://github.com/mashdd/PVZQoL2/releases/latest)** · [配置与常见问题](#配置) · [构建源码](#从源码构建)
+**[下载便携版](https://github.com/ShuoNest/PVZQoL2/releases/latest)** · [配置与常见问题](#配置) · [构建源码](#从源码构建)
 
 > 自动喂树、干草叉及耗材补购默认开启，会消耗存货和游戏金币。持续喂树没有高度上限；不需要时请取消勾选。v0.5.0 新增花园自动化已通过离线逻辑检查，尚未完成完整的游戏内实机验证。
 
@@ -25,7 +25,7 @@
 
 ## 下载与安装
 
-1. 在 [Releases](https://github.com/mashdd/PVZQoL2/releases) 下载 `PVZQoL2-v0.5.0-win-x64.zip`。普通玩家无需下载 `Source code`。
+1. 在 [Releases](https://github.com/ShuoNest/PVZQoL2/releases) 下载 `PVZQoL2-v0.5.0-win-x64.zip`。普通玩家无需下载 `Source code`。
 2. 正常退出游戏和旧助手。首次使用建议备份自己的游戏存档。
 3. 解压，将整个 `PVZQoL2` 文件夹放到 `Replanted.exe` 所在目录：
 
